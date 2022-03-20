@@ -367,7 +367,7 @@ def _aggregate_components(df, to_component, from_components, corrected_mass):
 
 def CIPW_norm(df, Fe_correction=None, Fe_correction_mode=None, adjust_all_Fe=False):
     """
-    Standardised calcuation of estimated mineralogy from bulk rock chemistry.
+    Standardised calculation of estimated mineralogy from bulk rock chemistry.
     Takes a dataframe of chemistry & creates a dataframe of estimated mineralogy.
 
     This is the CIPW norm of Verma et al. (2003).  This version only uses major
@@ -476,7 +476,7 @@ def CIPW_norm(df, Fe_correction=None, Fe_correction_mode=None, adjust_all_Fe=Fal
             "Iron correction {} not recognised.".format(Fe_correction)
         )
 
-    # select just the columns we'll use; remove e.g. FeOT, Fe2O3T which have been recalcuated
+    # select just the columns we'll use; remove e.g. FeOT, Fe2O3T which have been recalculated
     df = df.reindex(columns=columns).fillna(0)
 
     majors = [
